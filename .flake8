@@ -1,0 +1,14 @@
+[flake8]
+# default ignores are: E121,E123,E126,E226,E24,E704,W503,W504
+# E704 needs to be ignored because variable type annotations trigger it.
+# E226 (space around arithmatic operators) is not really a pep8 requirement and no one cares
+# W503 (Line breaks after operators) is not recommended for new code: https://www.python.org/dev/peps/pep-0008/#id20
+# D413 (missing line after last section in docstring) code looks nicer without
+ignore = E704,E226,W503,D105,N805,D202,D413
+exclude = .eggs,*egg*,doc,.git,__pycache__,venv,tmp,.idea,setup.py,cli.py,conf.py
+max-line-length = 120
+import-order-style = google
+inline-quotes = '
+application-import-names = walzenassistent
+[pep8]
+max-line-length = 120
